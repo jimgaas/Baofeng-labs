@@ -1,0 +1,13 @@
+Byte differences:
+0x0020: b5 -> 75   channel 1, RX tone byte 8
+0x0021: 02 -> 03   channel 1, RX tone byte 9
+0x0022: b5 -> 75   channel 1, TX tone byte 10
+0x0023: 02 -> 03   channel 1, TX tone byte 11
+
+Channel summary:
+Channel 1 RX: 452.125 -> 452.125
+Channel 1 TX: 452.125 -> 452.125
+Channel 1 offset: 0.000 -> 0.000
+Channel 1 duplex: simplex -> simplex
+Channel 1 RX tone: 69.3 Hz -> 88.5 Hz
+Channel 1 TX tone: 69.3 Hz -> 88.5 Hz

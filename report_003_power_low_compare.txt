@@ -1,0 +1,2 @@
+Comparing files 03_UV5R_EX_ch1_power_low_clean.img and 03_UV5R_EX_CH1_POWER_LOW.IMG
+00000026: 00 01

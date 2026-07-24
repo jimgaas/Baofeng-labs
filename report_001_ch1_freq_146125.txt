@@ -1,0 +1,11 @@
+Byte differences:
+0x001a: 21 -> 61   channel 1, RX frequency byte 2
+0x001b: 45 -> 14   channel 1, RX frequency byte 3
+0x001e: 21 -> 67   channel 1, TX frequency byte 6
+0x001f: 45 -> 14   channel 1, TX frequency byte 7
+
+Channel summary:
+Channel 1 RX: 452.125 -> 146.125
+Channel 1 TX: 452.125 -> 146.725
+Channel 1 offset: 0.000 -> 0.600
+Channel 1 duplex: simplex -> +
