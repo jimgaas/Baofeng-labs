@@ -1,0 +1,11 @@
+Byte differences:
+0x0026: 00 -> 01   channel 1, power/settings byte 14
+
+Channel summary:
+Channel 1 RX: 452.125 -> 452.125
+Channel 1 TX: 452.125 -> 452.125
+Channel 1 offset: 0.000 -> 0.000
+Channel 1 duplex: simplex -> simplex
+Channel 1 RX tone: 69.3 Hz -> 69.3 Hz
+Channel 1 TX tone: 69.3 Hz -> 69.3 Hz
+Channel 1 power/settings byte: 00 -> 01

@@ -7,8 +7,7 @@ START = 0x18
 RECSIZE = 16
 
 
-
-BASE_FILE = "Radioddity_UV-5R EX_20260721-1-factory-baseline.img"
+BASE_FILE = "03_UV5R_EX_ch1_power_low_clean.img"
 
 #CHANGED_FILE = "01_UV5R_EX_ch1_freq_146125.img"
 
@@ -72,6 +71,8 @@ def field_name(pos):
 
     if pos < 12: return "TX tone"
 
+    if pos == 14: return "power/settings"
+
     return "other"
 
 
@@ -88,11 +89,11 @@ def tone_name(v):
 
     return "none" if v in (0, 0xffff) else f"{v / 10:.1f} Hz"
 
-
-
 base = Path(BASE_FILE).read_bytes()
-
 changed = Path(CHANGED_FILE).read_bytes()
+
+def record_byte(buf, ch, pos):
+    return buf[START + (ch - 1) * RECSIZE + pos]
 
 
 
@@ -142,4 +143,6 @@ for ch in sorted(changed_channels):
     print(f"Channel {ch} RX tone: {tone_name(field_tone(base, ch, 8))} -> {tone_name(field_tone(changed, ch, 8))}")
 
     print(f"Channel {ch} TX tone: {tone_name(field_tone(base, ch, 10))} -> {tone_name(field_tone(changed, ch, 10))}")
+
+    print(f"Channel {ch} power/settings byte: {record_byte(base, ch, 14):02x} -> {record_byte(changed, ch, 14):02x}")
 
